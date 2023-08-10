@@ -36,3 +36,15 @@ test('error test', () => {
   const char = new Magician('Morren', 7);
   expect(() => char.attack).toThrow('Расстояние слишком велико');
 });
+
+test('setter change 1', () => {
+  const char = new Magician('Morren', 1);
+  char.attack = 2;
+  expect(char.attack).toBe(90);
+});
+
+test('setter change 2', () => {
+  const char = new Daemon('Fafnir', 1);
+  char.stoned = 3;
+  expect(char.stoned).toBe(72.07518749639422);
+});
